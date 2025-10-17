@@ -1,0 +1,107 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  font-weight: var(--fw-600);
+  color: var(--black);
+  margin: 0;
+}
+
+.presetButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.presetButton {
+  padding: 10px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 9999px;
+  background-color: var(--white);
+  font-family: inherit;
+  font-size: 0.73rem;
+  font-weight: var(--fw-500);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.presetButton:hover {
+  background-color: rgba(239, 241, 246, 1);
+}
+
+.presetButton.active {
+  background-color: rgba(239, 241, 246, 1);
+  color: var(--black);
+}
+
+.presetButton:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+.dateRange {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Dropdown-style blocks for Transaction Type/Status */
+.dropdown {
+  margin-top: var(--space-2);
+}
+
+.dropdownSummary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-radius: 10px;
+  background: var(--gray-100);
+  font-weight: var(--fw-600);
+}
+
+.summaryArrow { transition: transform 0.2s ease; }
+
+details[open] .dropdownSummary {
+  background: var(--white);
+  border: 3px solid var(--black);
+}
+
+details[open] .summaryArrow { transform: rotate(180deg); }
+
+.dropdownPanel {
+  margin-top: var(--space-3);
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .dateRange {
+    grid-template-columns: 1fr;
+  }
+
+  .presetButtons {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,24 @@
+/* Degular webfont declarations mapped to your provided .otf files. */
+@font-face {
+  font-family: "Degular";
+  src: url("../assets/fonts/Degular-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("../assets/fonts/Demo-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("../assets/fonts/Demo-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

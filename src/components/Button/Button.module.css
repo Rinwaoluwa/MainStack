@@ -1,0 +1,88 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: var(--fw-600);
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  background-color: rgba(196, 196, 198, 0.831) !important;
+}
+
+.primary {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #2a2a2e;
+}
+
+.secondary {
+  background-color: #f0f0f0;
+  color: var(--black);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: #e8e8e8;
+}
+
+.none {
+  background-color: transparent;
+}
+
+.sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+}
+
+.md {
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+}
+
+.lg {
+  padding: var(--space-4) var(--space-6);
+  font-size: 1.125rem;
+}
+
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerDot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}

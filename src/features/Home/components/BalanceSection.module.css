@@ -1,0 +1,178 @@
+.section {
+  display: flex;
+  gap: 10%;
+  padding: var(--space-8) var(--space-6);
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  flex: 1;
+  min-width: 0;
+}
+
+.balanceCard {
+  background-color: var(--white);
+  padding: 0;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin: 0 0 var(--space-2) 0;
+  font-weight: var(--fw-500);
+}
+
+.amount {
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+  color: var(--black);
+}
+
+.balanceRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.chart {
+  background-color: var(--white);
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  min-height: 260px;
+}
+
+.chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Baseline and labels */
+.chartFooter {
+  margin-top: 8px;
+}
+
+.baseline {
+  position: relative;
+  height: 1px;
+  background: #e6eaef;
+  border-radius: 9999px;
+}
+
+.baselineDot {
+  position: absolute;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  background: #d4dae1;
+  border-radius: 50%;
+}
+
+.baselineDot:first-child { left: 0; }
+.baselineDot:last-child { right: 0; }
+
+.footerLabels {
+  display: flex;
+  justify-content: space-between;
+  color: #99a0a6;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-height: 360px;
+  overflow: auto;
+  width: 30%;
+  min-width: 0;
+}
+
+.balanceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.balanceItem {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemLabel {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin: 0 0 var(--space-2) 0;
+  font-weight: var(--fw-500);
+}
+
+.itemAmount {
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+  margin: 0;
+  color: var(--black);
+}
+
+.infoButton {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--gray);
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.infoButton:hover { background-color: transparent; }
+
+.infoButton:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+  }
+
+  .rightColumn {
+    max-height: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .amount {
+    font-size: 1.75rem;
+  }
+
+  .itemAmount {
+    font-size: 1.25rem;
+  }
+}

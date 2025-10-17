@@ -1,0 +1,37 @@
+:root {
+  --font-family: "Degular", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+
+  --green-100: #e3fcf2;
+  --green-400: rgba(14, 161, 99, 1);
+  --green-900: #075132;
+  --black: #131316;
+  --gray: #56616b;
+  --gray-100: rgba(239, 241, 246, 1);
+  --red: #ff5403;
+  --white: #ffffff;
+  --yellow: rgba(167, 122, 7, 1);
+
+  --radius-md: 8px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Figma multi-layer shadow */
+  --shadow: 0px 6px 12px 0px rgba(92, 115, 131, 0.08),
+            0px 4px 8px 0px rgba(92, 115, 131, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

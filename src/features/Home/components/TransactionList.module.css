@@ -1,0 +1,258 @@
+.section {
+  padding: var(--space-8) var(--space-6);
+  /* max-width: 1400px; */
+  /* margin: 0 auto; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(239, 241, 246, 1);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+  margin: 0 0 var(--space-1) 0;
+  color: var(--black);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin: 0;
+  font-weight: var(--fw-500);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: var(--fw-700);
+  margin-left: var(--space-2);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-top: 1px solid #eef0f2;
+  padding-top: var(--space-6);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  background: transparent;
+}
+
+.item:hover { background: transparent; }
+
+.itemContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 0;
+}
+
+.statusIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fw-700);
+  font-size: 0.875rem;
+  border: none;
+}
+
+.statusSuccess {
+  background-color: var(--green-100);
+  color: var(--green-400);
+}
+
+.statusPending {
+  background-color: #fff3e0;
+  color: var(--yellow);
+}
+
+.statusFailed {
+  background-color: #ffebee;
+  color: var(--red);
+}
+
+/* Outflow icon color variant (arrow up) */
+.outflow {
+  background-color: #fde8e8;
+  color: #b91c1c;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitle {
+  font-weight: var(--fw-600);
+  margin: 0 0 4px 0;
+  color: var(--black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemAuthor {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin: 0;
+  font-weight: var(--fw-500);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusText {
+  margin-top: var(--space-1);
+  font-size: 0.875rem;
+  font-weight: var(--fw-600);
+}
+
+.statusTextSuccess { color: var(--green-900); }
+.statusTextPending { color: #e65100; }
+.statusTextFailed { color: var(--red); }
+
+.itemMeta {
+  text-align: right;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.itemAmount {
+  font-weight: var(--fw-700);
+  margin: 0 0 4px 0;
+  color: var(--black);
+}
+
+.itemDate {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin: 0;
+  font-weight: var(--fw-500);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 64px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #f6f7f9;
+  color: #99a0a6;
+  margin-bottom: var(--space-4);
+  font-size: 18px;
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: var(--fw-700);
+  margin: 0 0 var(--space-2) 0;
+  color: var(--black);
+  max-width: 520px;
+}
+
+.emptyText {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 420px;
+  font-weight: var(--fw-500);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .header {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .actions {
+    width: 100%;
+    gap: var(--space-2);
+  }
+
+  .actions > div {
+    flex: 1;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .statusIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.75rem;
+  }
+
+  .itemContent {
+    gap: var(--space-3);
+  }
+
+  .itemMeta {
+    min-width: 80px;
+  }
+
+  .itemAmount {
+    font-size: 0.9375rem;
+  }
+
+  .itemDate,
+  .itemAuthor {
+    font-size: 0.8125rem;
+  }
+
+  .empty {
+    width: 100%;
+    padding: 48px 16px;
+  }
+}
